@@ -53,7 +53,7 @@ public class LuckyPenguin {
                 }
             } else if (sum == 7) {
                 write("Wedding! You give a fish and place it on F7.");
-                field[5]++;
+                field[7]++;
                 pingu[k]--;
             } else if (sum == 2) {
                 write("Lucky penguin! You win all fish on the board except F7!");
