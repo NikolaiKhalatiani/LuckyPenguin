@@ -62,14 +62,14 @@ public class LuckyPenguin {
                     pingu[k] += field[i];
                     field[i] = 0;
                 }
-            } else if (field[sum - 2] == 0) {
+            } else if (field[sum] == 0) {
                 write("You put a fish on F" + sum + ".");
                 pingu[k]--;
-                field[sum - 2]++;
+                field[sum]++;
             } else {
                 write("They take the fish from F" + sum + ".");
                 pingu[k]++;
-                field[sum - 2]--;
+                field[sum]--;
             }
             if (pingu[k] == 1) write("You now have " + pingu[k] + " fish!");
             else write("You now have " + pingu[k] + " fishes!");
