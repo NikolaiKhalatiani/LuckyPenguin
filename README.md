@@ -1,27 +1,22 @@
 # LuckyPenguin
 One of the first rather big Java projects from Freshman year at KIU.
 
-Lucky Penguin
 It is well known that after a long day at work, penguins like to go to the pub and play a game of craps about the fish they caught that day. The game Lucky Penguin is the most popular because you don't have to think too much and you can leave the game at any time. In addition, the game board can be drawn on the table quickly and easily.
 
-Game board drawn by a real penguin
 
-
-
-The rules of the game
+## The rules of the game
+<img align="right" width="200" height="400" src=https://artemis.ase.in.tum.de/api/files/markdown/Markdown_2020-11-11T14-43-22-981_a6efc7d3.png>
 The game board consists of 11 fields, from F2 to F12, on which you can place or remove fish in the course of the game. At the beginning of the game all fields are empty.
 
-The game can be played by 2 to any number of penguins. Let nnn be the number of penguins playing along. Every penguin starts out with mmm fish. The penguins are numbered from 0 to n−1n-1n−1. Your turn will be taken one after the other, first penguin 0, then penguin 1, and so on until penguin n−1n-1n−1. Then it's back to Penguin 0.
+The game can be played by 2 to any number of penguins. Let _**n**_ be the number of penguins playing along. Every penguin starts out with _**m**_ fish. The penguins are numbered from 0 to **n-1**. Your turn will be taken one after the other, first penguin 0, then penguin 1, and so on until penguin **n-1**. Then it's back to Penguin 0.
 
 When it is a penguin turn, he rolls two dice. The total of the two dice is assigned to the field with this number. So if a penguin rolls B. 3 and 2, this corresponds to field 5.
-
-For all fields except 2, 7 and 12: If a fish is already on the field, the penguin wins the fish. But if the field was empty, the penguin must put a fish on the field.
-
-In space 7 there is a wedding: The penguin must put a fish on the field, regardless of how many fish there are already.
-
-In field 2 the penguin is a lucky penguin: The lucky penguin wins all fish from all fields except from field 7!
-
-In space 12 the penguin is a king penguin: The king penguin wins all fish that are on the board!
+<ul>
+  <li> For all fields except 2, 7 and 12: If a fish is already on the field, the penguin wins the fish. But if the field was empty, the penguin must put a fish on the field. </li>
+  <li>  In space 7 there is a wedding: The penguin must put a fish on the field, regardless of how many fish there are already. </li>
+  <li> In field 2 the penguin is a lucky penguin: The lucky penguin wins all fish from all fields except from field 7! </li>
+  <li> In space 12 the penguin is a king penguin: The king penguin wins all fish that are on the board! </li>
+</ul>
 
 The current penguin can then decide to stop immediately and keep all of his fish. If he's out of fish anyway, he must stop playing.
 
@@ -31,14 +26,15 @@ At the end of the game, the penguins that have the most fish win. Mind you, ther
 
 
 
-Program Statemnt
-Initialization
+## Program Statemnt
+### **Initialization**
 Your program should query the number nnn of penguins playing along with the number mmm of fish that each penguin has at the beginning of the game.
 
 The command prompt via the console should look like this:
-
+```
 Number of penguins:
 Starting fish per penguin:
+```
 If nnn is less than 2, the following error message should be issued repeatedly and n should be read in again until n&gt;1n&gt;1n>1 is entered:
 
 Number of penguins should be >1:
