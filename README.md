@@ -43,7 +43,7 @@ It should also be ensured that _**m>0**_ applies, with the following input promp
 ```
 Starting fish should be >0:
 ```
-## Course of a move
+### **Course of a move**
 Each time before a penguin turns, the game board is displayed in the form of ASCII art. To do this, use the MiniJava method writeBoard (), which takes the number of fish in the fields F3, F4, F5, …, F11 as a parameter and outputs the board as follows:
 ```
 ┌─── o  o  o ───┐
@@ -69,44 +69,53 @@ When it comes to a penguin, the following should be displayed:
 It's penguin \<p> turn: where \<p> corresponds to the number of the penguin.
 
 Your program should now determine whether this penguin is the last penguin to play. If so, the following is issued before the game ends:
-
+```
 You are the last penguin to play! You win all the fish on the board!
+```
 If not, the penguin rolls the two dice. Use the MiniJava method dice (), which returns a random natural number between 1 and 6. The numbers rolled should be displayed as follows:
-
+```
 <w1> + <w2> = <sum> was rolled.
+```
 where <w1> and <w2> are the first and second numbers rolled, and <sum> is the sum of them.
 
 Depending on the total number of points rolled, your program should execute the rule described above and output the one corresponding line from the following:
+  
 
+```
 Lucky penguin! You win all fish on the board except F7!
 King Penguin! You win all the fish on the board!
 Wedding! You give a fish and place it on F7.
 They take the fish from F <sum>.
 You put a fish on F <sum>.
+```
 Then it should be output how many fish the current penguin has after following the above rules:
-
+```
 You now have <f> fish!
-Or if <f> = 1, then:
-
+```
+Or if \<f> = 1, then:
+```
 You now have 1 fish!
+```
 The only thing left to do is to decide whether this penguin will stop playing or not. If he has lost all fish, he immediately stops:
-
+```
 You have lost all fish, so you can no longer play!
+```
 Otherwise, he still has the option of voluntarily quitting. Your program should read in an integer for this:
-
+```
 Enter 1 to exit now:
+```
 If the number 1 is actually entered, the penguin stops immediately. When a penguin stops playing, it never comes back from that point.
 
-The end of the game
+### **The end of the game**
 At the end all the winning penguins should be handed out. If several penguins have won, they should be sorted in ascending order. In the following example, Penguin 1 and Penguin 5, who both have 17 fish, win:
-
+```
 The winning penguins with 17 fish:
 Penguin 1
 Penguin 5
-
+```
 
 Example
- Example 1 1 of 1 tests passing
+```
 Number of penguins:
 > 1
 Number of penguins should be >1:
@@ -228,16 +237,15 @@ You are the last penguin to play! You win all the fish on the board!
 The winning penguins with 3 fish:
 Penguin 1
 Penguin 2
+```
 The lines that begin with "> " mark the user input and are not output by the program. They only serve to make it easier to understand.
 
-
-
 FAQ
-Q: Why are the same numbers rolled over and over again with each execution?
+Q: Why are the same numbers rolled over and over again with each execution?  
 A: MiniJava's dice () method generates pseudorandom numbers that depend deterministically on a seed.
 
-Q: If only one penguin wins or the winners only have one fish, must / may we use the singular in the last message?
+Q: If only one penguin wins or the winners only have one fish, must / may we use the singular in the last message?  
 A: No
 
-Q: I'm using IntelliJ and my console is showing gaps between the lines, which is why the game board is getting ugly …
+Q: I'm using IntelliJ and my console is showing gaps between the lines, which is why the game board is getting ugly …  
 A: In File> Settings> Editor> Color Scheme> Console Font you can set the settingLine spacing to 0.9 or 1.0.
