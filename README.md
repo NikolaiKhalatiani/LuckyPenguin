@@ -8,7 +8,7 @@ It is well known that after a long day at work, penguins like to go to the pub a
 <img align="right" width="200" height="400" src=https://artemis.ase.in.tum.de/api/files/markdown/Markdown_2020-11-11T14-43-22-981_a6efc7d3.png>
 The game board consists of 11 fields, from F2 to F12, on which you can place or remove fish in the course of the game. At the beginning of the game all fields are empty.
 
-The game can be played by 2 to any number of penguins. Let _**n**_ be the number of penguins playing along. Every penguin starts out with _**m**_ fish. The penguins are numbered from 0 to **n-1**. Your turn will be taken one after the other, first penguin 0, then penguin 1, and so on until penguin **n-1**. Then it's back to Penguin 0.
+The game can be played by 2 to any number of penguins. Let _**n**_ be the number of penguins playing along. Every penguin starts out with _**m**_ fish. The penguins are numbered from 0 to _**n-1**_. Your turn will be taken one after the other, first penguin 0, then penguin 1, and so on until penguin _**n-1**_. Then it's back to Penguin 0.
 
 When it is a penguin turn, he rolls two dice. The total of the two dice is assigned to the field with this number. So if a penguin rolls B. 3 and 2, this corresponds to field 5.
 <ul>
@@ -35,15 +35,17 @@ The command prompt via the console should look like this:
 Number of penguins:
 Starting fish per penguin:
 ```
-If nnn is less than 2, the following error message should be issued repeatedly and n should be read in again until n&gt;1n&gt;1n>1 is entered:
-
+If _**n**_ is less than 2, the following error message should be issued repeatedly and _**n**_ should be read in again until _**n>1**_ is entered:
+```
 Number of penguins should be >1:
-It should also be ensured that m&gt;0m&gt;0m>0 applies, with the following input prompt in the event of an error:
-
+```
+It should also be ensured that _**m>0**_ applies, with the following input prompt in the event of an error:
+```
 Starting fish should be >0:
-Course of a move
+```
+## Course of a move
 Each time before a penguin turns, the game board is displayed in the form of ASCII art. To do this, use the MiniJava method writeBoard (), which takes the number of fish in the fields F3, F4, F5, …, F11 as a parameter and outputs the board as follows:
-
+```
 ┌─── o  o  o ───┐
 │    │╲╱ ╲╱│    │
 │    │_F12_│    │
@@ -61,10 +63,10 @@ Each time before a penguin turns, the game board is displayed in the form of ASC
 │ ╱/╲  F2   ╱\╲ │
 ├─V_╱─┐   ┌─╲_V─┤
 └─────┴───┴─────┘
+```
 When it comes to a penguin, the following should be displayed:
 
-It's penguin <p> turn:
-where <p> corresponds to the number of the penguin.
+It's penguin \<p> turn: where \<p> corresponds to the number of the penguin.
 
 Your program should now determine whether this penguin is the last penguin to play. If so, the following is issued before the game ends:
 
