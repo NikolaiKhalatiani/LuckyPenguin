@@ -4,18 +4,18 @@ import static pgdp.MiniJava.*;
 
 public class LuckyPenguin {
     public static void main(String[] args) {
-        int numberOfPenguins = readInt("Number of penguins:");
-        while (numberOfPenguins <= 1)
+        int numberOfPenguins = readInt("Number of penguins:"); //asking user for number of playing Penguin
+        while (numberOfPenguins <= 1) //loop for checking number of players to be more than 1
             numberOfPenguins = readInt("Number of penguins should be >1:");
-        int numFish = readInt("Starting fish per penguin:");
-        while (numFish <= 0)
+        int numFish = readInt("Starting fish per penguin:"); //asking user for number of fish each players starts with
+        while (numFish <= 0) //loop for checking number of fish to be more than 0
             numFish = readInt("Starting fish should be >0:");
-        int[] numOfFishEachPenguinHas = new int[numberOfPenguins];
-        for (int i = 0; i < numberOfPenguins; i++) {
-            numOfFishEachPenguinHas[i] = numFish;
+        int[] numOfFishEachPenguinHas = new int[numberOfPenguins]; //creating array with length equal to number of Penguins playing
+        for (int i = 0; i < numberOfPenguins; i++) { //using loop for filling array with amount of fish user had entered
+            numOfFishEachPenguinHas[i] = numFish; 
         }
-        int[] playField = new int[13];
-        int[] bankruptPenguinsArray = new int[numberOfPenguins];
+        int[] playField = new int[13]; //creating array for playboard
+        int[] bankruptPenguinsArray = new int[numberOfPenguins]; //creating helper array for penguins who have lost
         int playerNum = 0;
         int firstDice;
         int secondDice;
