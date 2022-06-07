@@ -114,7 +114,7 @@ Penguin 1
 Penguin 5
 ```
 
-Example
+### Example
 ```
 Number of penguins:
 > 1
@@ -240,7 +240,7 @@ Penguin 2
 ```
 The lines that begin with "> " mark the user input and are not output by the program. They only serve to make it easier to understand.
 
-FAQ
+### FAQ
 Q: Why are the same numbers rolled over and over again with each execution?  
 A: MiniJava's dice () method generates pseudorandom numbers that depend deterministically on a seed.
 
